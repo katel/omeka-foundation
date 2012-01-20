@@ -1,0 +1,137 @@
+/* Foundation v2.1.4 http://foundation.zurb.com */
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+
+#primary {
+width:100%;
+max-width:980px;
+min-width:727px;
+margin:0 auto;
+}
+
+/* -----------------------------------------
+   Forms
+----------------------------------------- */
+
+/* a bit of a hacky way to match the button with foundation buttons */
+
+#submit_search {
+margin: 0 0 18px;
+			background: #00a6fc;
+		display: inline-block;
+		text-align: center;
+font-size: 11px; padding: 6px 12px 10px; width: auto; 		
+color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		line-height: 1;
+		font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
+		position: relative;
+		cursor: pointer;
+		border: none;
+			background: #00a6fc url(../images/misc/button-gloss.png) repeat-x 0 -34px;
+		-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+		-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+		text-shadow: 0 -1px 1px rgba(0,0,0,0.28);
+		background: #00a6fc url(../images/misc/button-gloss.png) repeat-x 0 -34px, -moz-linear-gradient(top, rgba(255,255,255,.4) 0%, transparent 100%);
+		background: #00a6fc url(../images/misc/button-gloss.png) repeat-x 0 -34px, -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.4)), color-stop(100%,transparent));
+		border: 1px solid #0593dc;
+		-webkit-transition: background-color .15s ease-in-out;
+		-moz-transition: background-color .15s ease-in-out;
+		-o-transition: background-color .15s ease-in-out;
+	
+}
+
+#simple-search .textinput {
+border:solid 1px #bbb;
+border-radius:2px;
+-webkit-border-radius:2px;
+-moz-border-radius:2px;
+font-size:14px;
+background:#fff;
+width:134px;
+color:#666;
+margin:0 1.2em 1em 0;
+padding:6px 12px 10px;
+}
+
+#search.textinput {
+width:254px;
+color:#666;
+}
+
+#simple-search fieldset {
+border:0;
+color:#666;
+margin:0 auto;
+padding:0.5em 3em;
+}
+
+div.inputs {
+margin-bottom:1em;
+}
+
+
+
+/* Hovers ---------- */
+
+
+
+}
+
+/* Tags ahoy ---------- */
+
+
+.tagcloud p {
+padding:10px;
+}
+
+.hTagcloud ul {
+width:47.8%;
+overflow:hidden;
+background-color:#f2f2f2;
+margin:0 0 1em;
+}
+
+.hTagcloud li {
+display:inline-block;
+float:left;
+text-align:center;
+margin:0 20px 20px 0;
+padding:10px;
+}
+
+tagcloud p {
+background-color:#f2f2f2;
+box-shadow:0 3px 5px #666;
+-webkit-box-shadow:0 3px 5px #666;
+-moz-box-shadow:0 3px 5px #666;
+margin-bottom:20px;
+}
+/* -----------------------------------------
+   Page Name 1
+----------------------------------------- */
+
+
+
+}
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+
