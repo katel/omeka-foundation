@@ -33,7 +33,7 @@ margin: 0 0 18px;
 			background: #00a6fc;
 		display: inline-block;
 		text-align: center;
-font-size: 11px; padding: 6px 12px 10px; width: auto; 		
+font-size: 11px; padding: 6px 12px 10px; 		
 color: #fff;
 		text-decoration: none;
 		font-weight: bold;
@@ -46,8 +46,7 @@ color: #fff;
 		-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
 		-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
 		text-shadow: 0 -1px 1px rgba(0,0,0,0.28);
-		background: #00a6fc url(../images/misc/button-gloss.png) repeat-x 0 -34px, -moz-linear-gradient(top, rgba(255,255,255,.4) 0%, transparent 100%);
-		background: #00a6fc url(../images/misc/button-gloss.png) repeat-x 0 -34px, -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.4)), color-stop(100%,transparent));
+
 		border: 1px solid #0593dc;
 		-webkit-transition: background-color .15s ease-in-out;
 		-moz-transition: background-color .15s ease-in-out;
@@ -60,11 +59,11 @@ border:solid 1px #bbb;
 border-radius:2px;
 -webkit-border-radius:2px;
 -moz-border-radius:2px;
-font-size:14px;
+font-size: 11px; padding: 6px 12px 10px; width: auto; 
 background:#fff;
-width:134px;
+width:125px;
 color:#666;
-margin:0 1.2em 1em 0;
+margin:0 2em 1em 0;
 padding:6px 12px 10px;
 }
 
