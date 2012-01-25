@@ -37,7 +37,15 @@ display_css();
 			 
     			
     			<ul class="nav-bar">
-    			   <li> <?php echo custom_public_nav_header(); ?></li>
+    			  <li><?php echo nav (
+               array(
+               
+                  'Browse Items' => uri('items'), 
+                  'Browse Collections' => uri('collections')
+               )
+           ); 
+?></li>
+
                    <li><?php echo link_to_advanced_search('More Search Options'); ?></li>
                                   <div id="search-container">
                                   <li > <?php echo simple_search(); ?></li>
