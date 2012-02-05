@@ -45,15 +45,12 @@ ul#secondary-nav li {
 
 /*icons from WooFunction Icon set by Liam McKay     */
 li.nav-browse-by-tag{
-
-	  background: url(../images/preview.png)left center no-repeat;
+	  background: url(../images/preview.png) left center no-repeat;
 
 
 }
 li.nav-browse-all {
-
-	  background: url(../images/search.png)left center no-repeat;
-
+	  background: url(../images/search.png) left center no-repeat;
 }
 
 
@@ -173,7 +170,7 @@ margin-bottom:20px;
 /*  --------------------------------------------------
     Pagination
     -------------------------------------------------- */
-    ul.pagination_list { display: block; height: 24px; margin-left: -5px; margin-top: 10px; }
+    ul.pagination_list { display: block; height: 24px; margin-left: -5px; padding-top: 10px; }
     ul.pagination_list li { float: left; display: block; height: 24px; color: #999; font-size: 15px; margin-left: 5px; }
     ul.pagination_list li a { display: block; padding: 6px 7px 4px; color: #555; }
     ul.pagination_list li.pagination_current, ul.pagination li:hover a, ul.pagination li a:focus { margin: 5px; border-bottom: solid 2px #00a6fc; color: #141414; }
