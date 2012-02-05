@@ -2,25 +2,60 @@
 /* Artfully masterminded by ZURB  */
 
 /* -------------------------------------------------- 
-   Table of Contents
+   Colour scheme
 -----------------------------------------------------
-:: Shared Styles
-:: Page Name 1
-:: Page Name 2
-*/
+
+
+#2a85e8
 
 
 /* -----------------------------------------
-   Shared Styles
+   Legacy class fixes
 ----------------------------------------- */
 
 
 #primary {
+	
 width:100%;
 max-width:980px;
 min-width:727px;
 margin:0 auto;
 }
+
+
+/* -----------------------------------------
+   Browsing styles
+----------------------------------------- */
+
+
+.hentry {
+padding-top: 1em;
+}
+
+.element {
+margin-bottom: 1em;
+}
+
+
+ul#secondary-nav li {
+	line-height: 3em;
+ 	padding-left: 35px;
+ list-style: none;
+}
+
+/*icons from WooFunction Icon set by Liam McKay     */
+li.nav-browse-by-tag{
+
+	  background: url(../images/preview.png)left center no-repeat;
+
+
+}
+li.nav-browse-all {
+
+	  background: url(../images/search.png)left center no-repeat;
+
+}
+
 
 /* -----------------------------------------
    Forms
@@ -85,11 +120,7 @@ margin-bottom:1em;
 
 
 
-/* Hovers ---------- */
 
-
-
-}
 
 /* Tags ahoy ---------- */
 
@@ -99,10 +130,15 @@ padding:10px;
 }
 
 .hTagcloud ul {
-width:47.8%;
+width:50%;
 overflow:hidden;
 background-color:#f2f2f2;
 margin:0 0 1em;
+
+border-radius: 8px;
+-moz-border-radius: 8px;
+-webkit-border-radius: 8px;
+
 }
 
 .hTagcloud li {
@@ -120,17 +156,37 @@ box-shadow:0 3px 5px #666;
 -moz-box-shadow:0 3px 5px #666;
 margin-bottom:20px;
 }
+
+.popular {font-size:100%;}
+.v-popular {font-size:140%;}
+.vv-popular {font-size:180%;}
+.vvv-popular {font-size:220%;}
+.vvvv-popular {font-size:260%;}
+.vvvvv-popular {font-size:300%;}
+.vvvvvv-popular {font-size:320%;}
+.vvvvvvv-popular {font-size:340%;}
+.vvvvvvvv-popular {font-size:360%;}
+
+
+
+
+/*  --------------------------------------------------
+    Pagination
+    -------------------------------------------------- */
+    ul.pagination_list { display: block; height: 24px; margin-left: -5px; margin-top: 10px; }
+    ul.pagination_list li { float: left; display: block; height: 24px; color: #999; font-size: 15px; margin-left: 5px; }
+    ul.pagination_list li a { display: block; padding: 6px 7px 4px; color: #555; }
+    ul.pagination_list li.pagination_current, ul.pagination li:hover a, ul.pagination li a:focus { margin: 5px; border-bottom: solid 2px #00a6fc; color: #141414; }
+    ul.pagination_list li.unavailable a { cursor: default; color: #999; }
+    ul.pagination_list li.unavailable:hover a, ul.pagination li.unavailable a:focus { border-bottom: none; }
+
+
+
+
 /* -----------------------------------------
-   Page Name 1
+  Footer 
 ----------------------------------------- */
 
-
-
+#footer {
+	border-top: 1px solid #dddddd;
 }
-
-
-/* -----------------------------------------
-   Page Name 2
------------------------------------------ */
-
-

@@ -65,6 +65,6 @@
     </div><!-- end recent-collections -->
     </div>
     </div>
-</div><!-- end secondary -->
+</div>
 <footer>
 <?php foot(); ?></footer>
