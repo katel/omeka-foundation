@@ -6,8 +6,6 @@ Colour scheme
 -----------------------------------------------------
 
 
-#2a85e8
-
 
 /* -----------------------------------------
 Legacy class fixes
@@ -68,7 +66,6 @@ Forms
 	text-decoration: none;
 	font-weight: bold;
 	line-height: 1;
-	font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
 	position: relative;
 	cursor: pointer;
 	border: none;
@@ -91,7 +88,6 @@ Forms
 	padding: 6px 12px 10px;
 	width: auto;
 	background: #fff;
-	width: 125px;
 	color: #666;
 	margin: 0 2em 1em 0;
 	padding: 6px 12px 10px;
