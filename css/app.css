@@ -102,15 +102,15 @@ Forms
 	border: 0;
 	color: #666;
 	margin: 0 auto;
-	padding: 0.5em 3em;
-}
-
-div.inputs {
-	margin-bottom: 1em;
+	padding: 0 2em;
 }
 
 
 
+li#search-container {
+line-height: 3em;
+border: hidden
+}
 
 
 /* Tags ahoy ---------- */
