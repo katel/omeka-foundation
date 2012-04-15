@@ -15,9 +15,9 @@
 	<?php echo display_random_featured_item(); ?>
 </div>
 
-<!--end featured-item-->
-<?php endif; ?>
 
+<?php endif; ?>
+<!--end featured-item-->
 
 <!-- Recent Items -->
 <div id="recent-items" class="six columns">
@@ -43,12 +43,15 @@ if (has_items_for_loop()):
 	<?php endif; ?>
 	<p class="view-items-link"><?php echo link_to_browse_items('View All Items'); ?></p>
 
-<!-- end recent-items -->
-</div>
 
-<div class="row">
-			<div class="twelve columns">
+</div>
+</div>
+<!-- end recent-items -->
+
 	<!-- Featured Collection -->
+<div class="row">
+<div class="twelve columns">
+
 			<div class="panel">
 	<?php if (get_theme_option('Display Featured Collection')): ?>
 
@@ -56,11 +59,13 @@ if (has_items_for_loop()):
 	<?php echo display_random_featured_collection(); ?>
 	</div>
 	
-	<!-- end featured collection -->
+
 	</div>
 
 <?php endif; ?>
-
+	<!-- end featured collection -->
+	
+	
 	<!-- Featured Exhibit -->
 	
 	<div class="row">
