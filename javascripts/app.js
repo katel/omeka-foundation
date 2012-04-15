@@ -92,3 +92,5 @@ $(document).ready(function () {
 	/* Gives elements with a class of 'disabled' a return: false; */
 
 });
+
+

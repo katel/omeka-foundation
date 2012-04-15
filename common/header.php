@@ -20,7 +20,10 @@ display_css();
 ?>
 
 <!-- JavaScripts -->
-<?php echo display_js(); ?>
+<?php
+queue_js(array('app', 'foundation'));
+display_js();
+?>
 
 </head>
 

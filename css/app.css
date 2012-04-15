@@ -2,7 +2,40 @@
 /* Artfully masterminded by ZURB */
 
 /* --------------------------------------------------
-Colour scheme
+Working with ZURB 
+
+Zurb is a CSS framework for rapid prototyping based around a 12-column, percentage-based grid. 
+
+There are containers to manage the padding for the page and columns to structure the page.  
+Rows create a max-width and contain the columns;
+e.g. 
+
+<div class="container">
+  <div class="row">
+    <div class="six columns">
+     A half-page column here
+    </div>
+    <div class="six columns">
+      And another half page column here			
+    </div>
+  </div>
+</div>
+
+There's a lot more to it than this, check out http://foundation.zurb.com/docs/ for info. 
+
+*/
+
+
+
+/* --------------------------------------------------
+Default colour scheme reference
+body font-color - #555; 
+h1, h2, h3, h4, h5, h6 - #181818
+a  - #2a85e8
+a:hover - #11639d 
+a:focus - #cc4714
+button - #00a6fc
+
 -----------------------------------------------------
 
 
