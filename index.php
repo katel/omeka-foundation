@@ -1,12 +1,13 @@
 <?php head(); ?>
 <div class="container">
+<div id="primary"  class="content">
 <?php if ($homepageText = get_theme_option('Homepage Text')): ?>
 <p><?php echo $homepageText; ?></p>
 <?php endif; ?>
 
 <?php if (get_theme_option('Display Featured Item') == 1): ?>
 <!-- Featured Item -->
-<div id="primary"  class="content">
+
 <div class="row">
   <div id="featured-items" class="six columns">
 
@@ -56,11 +57,12 @@ if (has_items_for_loop()):
 
 	<div class="row">
 	<div class="six columns">
+	<!-- Featured Exhibit -->
 <?php if ((get_theme_option('Display Featured Exhibit')) && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
 </div>
 <div class="row">
  <div class="four columns">
-<!-- Featured Exhibit -->
+
 <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
 <?php endif; ?>
 </div><!-- end recent-collections -->
