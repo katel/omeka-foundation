@@ -81,6 +81,10 @@ li.nav-browse-all {
 	background: url(../images/search.png) left center no-repeat;
 }
 
+.item-pagination > li {
+padding: 0 10px;
+display: inline;
+}
 
 /* -----------------------------------------
 Forms
