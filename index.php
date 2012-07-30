@@ -1,9 +1,10 @@
 <?php head(); ?>
-<div class="container">
+
+
 <div id="primary"  class="content">
-    <?php if ($homepageText = get_theme_option('Homepage Text')): ?>
-    <p><?php echo $homepageText; ?></p>
-    <?php endif; ?>
+<?php if (get_theme_option('Homepage Text')): ?>
+<p><?php echo get_theme_option('Homepage Text'); ?></p>
+<?php endif; ?>
 
 <?php if (get_theme_option('Display Featured Item') == 1): ?>
 

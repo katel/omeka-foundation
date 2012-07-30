@@ -1,5 +1,5 @@
-/* Foundation v2.1.4 http://foundation.zurb.com */
-/* Artfully masterminded by ZURB */
+/* Foundation v2.2.1 http://foundation.zurb.com */
+/* Artfully masterminded by ZURB  */
 
 /* --------------------------------------------------
 Working with ZURB 
@@ -50,8 +50,18 @@ Legacy class fixes
 	max-width: 980px;
 	min-width: 727px;
 	margin: 0 auto;
+	
 }
 
+/* -----------------------------------------
+Featured collections showcase using Orbit
+----------------------------------------- */
+
+#featured-collection { background: url(spinner.gif) center center #f4f4f4; height: 300px; }
+#featured-collection img { display: none; }
+
+#featured-collection.orbit { background: none; }
+#featured-collection.orbit img { display: block; }
 
 /* -----------------------------------------
 Browsing styles
@@ -90,23 +100,24 @@ display: inline;
 Forms
 ----------------------------------------- */
 
+
+
 /* a bit of a hacky way to match the button with foundation buttons */
 
-#submit_search {
-	margin: 0 0 18px;
-	background: #00a6fc;
-	display: inline-block;
+#submit_search, #submit_search_advanced {
+	margin: 3px 3px 18px;
+	background: #2ba6cb;
 	text-align: center;
 	font-size: 11px;
 	padding: 6px 12px 10px;
 	color: #fff;
 	text-decoration: none;
 	font-weight: bold;
-	line-height: 1;
+
 	position: relative;
 	cursor: pointer;
 	border: none;
-	background: #00a6fc url(../images/misc/button-gloss.png) repeat-x 0 -34px;
+	background: #2ba6cb url(../images/misc/button-gloss.png) repeat-x 0 -34px;
 	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
 	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
 	text-shadow: 0 -1px 1px rgba(0,0,0,0.28);
@@ -117,36 +128,33 @@ Forms
 }
 
 #simple-search .textinput {
-	border: solid 1px #bbb;
-	border-radius: 2px;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	font-size: 11px;
-	padding: 6px 12px 10px;
-	width: auto;
-	background: #fff;
-	color: #666;
-	margin: 0 2em 1em 0;
-	padding: 6px 12px 10px;
+display: inline-block;
+width: 200px;
+padding: 6px 12px 10px;
+
+
+
+
 }
 
-#search.textinput {
-	width: 254px;
-	color: #666;
+
+#search-container {
+float: right;
+border: none;
+margin:0  1em;
+
 }
 
 #simple-search fieldset {
-	border: 0;
-	color: #666;
-	margin: 0 auto;
-	padding: 0 2em;
-}
 
+border: none;
+padding: 0 ;
+margin: 0;}
 
+/*advanced search */
 
-li#search-container {
-line-height: 3em;
-border: hidden
+#search-selects > div.field {
+margin-top: 1em;
 }
 
 

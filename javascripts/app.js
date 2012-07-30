@@ -1,5 +1,5 @@
-/* Foundation v2.1.4 http://foundation.zurb.com */
-$(document).ready(function () {
+/* Foundation v2.2.1 http://foundation.zurb.com */
+jQuery(document).ready(function ($) {
 
 	/* Use this js doc for all application specific JS */
 
@@ -9,14 +9,17 @@ $(document).ready(function () {
 	function activateTab($tab) {
 		var $activeTab = $tab.closest('dl').find('a.active'),
 				contentLocation = $tab.attr("href") + 'Tab';
+				
+		// Strip off the current url that IE adds
+		contentLocation = contentLocation.replace(/^.+#/, '#');
 
 		//Make Tab Active
 		$activeTab.removeClass('active');
 		$tab.addClass('active');
 
-    	//Show Tab Content
+    //Show Tab Content
 		$(contentLocation).closest('.tabs-content').children('li').hide();
-		$(contentLocation).show();
+		$(contentLocation).css('display', 'block');
 	}
 
 	$('dl.tabs').each(function () {
@@ -29,6 +32,7 @@ $(document).ready(function () {
 
 	if (window.location.hash) {
 		activateTab($('a[href="' + window.location.hash + '"]'));
+		$.foundation.customForms.appendCustomMarkup();
 	}
 
 	/* ALERT BOXES ------------ */
@@ -45,6 +49,9 @@ $(document).ready(function () {
 
 	$('input, textarea').placeholder();
 
+	/* TOOLTIPS ------------ */
+	$(this).tooltips();
+
 
 
 	/* UNCOMMENT THE LINE YOU WANT BELOW IF YOU WANT IE6/7/8 SUPPORT AND ARE USING .block-grids */
@@ -57,40 +64,55 @@ $(document).ready(function () {
 
 	/* DROPDOWN NAV ------------- */
 
-	var currentFoundationDropdown = null;
-	$('.nav-bar li a, .nav-bar li a:after').each(function() {
-		$(this).data('clicks', 0);
-	});
-	$('.nav-bar li a, .nav-bar li a:after').live('click', function(e) {
+	var lockNavBar = false;
+	$('.nav-bar a.flyout-toggle').live('click', function(e) {
 		e.preventDefault();
-		if (currentFoundationDropdown !== $(this).index() || currentFoundationDropdown === null) {
-			$(this).data('clicks', 0);
-			currentFoundationDropdown = $(this).index();
+		var flyout = $(this).siblings('.flyout');
+		if (lockNavBar === false) {
+			$('.nav-bar .flyout').not(flyout).slideUp(500);
+			flyout.slideToggle(500, function(){
+				lockNavBar = false;
+			});
 		}
-		$(this).data('clicks', ($(this).data('clicks') + 1));
-		var f = $(this).siblings('.flyout');
-		if (!f.is(':visible') && $(this).parent('.has-flyout').length > 1) {
-			$('.nav-bar li .flyout').hide();
-			f.show();
-		} else if (($(this).data('clicks') > 1) || ($(this).parent('.has-flyout').length < 1)) {
-			window.location = $(this).attr('href');
-		}
+		lockNavBar = true;
 	});
-	$('.nav-bar').live('click', function(e) {
-		e.stopPropagation();
-		if ($(e.target).parents().is('.flyout') || $(e.target).is('.flyout')) {
-			e.preventDefault();
-		}
-	});
-	// $('body').bind('touchend', function(e) {
-	// 	if (!$(e.target).parents().is('.nav-bar') || !$(e.target).is('.nav-bar')) {
-	// 		$('.nav-bar li .flyout').is(':visible').hide();
-	// 	}
-	// });
+  if (Modernizr.touch) {
+    $('.nav-bar>li.has-flyout>a.main').css({
+      'padding-right' : '75px'
+    });
+    $('.nav-bar>li.has-flyout>a.flyout-toggle').css({
+      'border-left' : '1px dashed #eee'
+    });
+  } else {
+    $('.nav-bar>li.has-flyout').hover(function() {
+      $(this).children('.flyout').show();
+    }, function() {
+      $(this).children('.flyout').hide();
+    })
+  }
+
 
 	/* DISABLED BUTTONS ------------- */
 	/* Gives elements with a class of 'disabled' a return: false; */
-
+  
 });
 
-
+$('.items-list').orbit({
+     animation: 'fade',                  // fade, horizontal-slide, vertical-slide, horizontal-push
+     animationSpeed: 800,                // how fast animtions are
+     timer: true, 			 // true or false to have the timer
+     resetTimerOnClick: false,           // true resets the timer instead of pausing slideshow progress
+     advanceSpeed: 4000, 		 // if timer is enabled, time between transitions 
+     pauseOnHover: false, 		 // if you hover pauses the slider
+     startClockOnMouseOut: false, 	 // if clock should start on MouseOut
+     startClockOnMouseOutAfter: 1000, 	 // how long after MouseOut should the timer start again
+     directionalNav: true, 		 // manual advancing directional navs
+     captions: true, 			 // do you want captions?
+     captionAnimation: 'fade', 		 // fade, slideOpen, none
+     captionAnimationSpeed: 800, 	 // if so how quickly should they animate in
+     bullets: false,			 // true or false to activate the bullet navigation
+     bulletThumbs: false,		 // thumbnails for the bullets
+     bulletThumbLocation: '',		 // location from this file where thumbs will be
+     afterSlideChange: function(){}, 	 // empty function 
+     fluid: true                         // or set a aspect ratio for content slides (ex: '4x3') 
+});
