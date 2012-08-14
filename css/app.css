@@ -1,4 +1,4 @@
-/* Foundation v2.2.1 http://foundation.zurb.com */
+/* Foundation v3.0 http://foundation.zurb.com */
 /* Artfully masterminded by ZURB  */
 
 /* --------------------------------------------------
@@ -6,19 +6,15 @@ Working with ZURB
 
 Zurb is a CSS framework for rapid prototyping based around a 12-column, percentage-based grid. 
 
-There are containers to manage the padding for the page and columns to structure the page.  
+There are columns to structure the page.  
 Rows create a max-width and contain the columns;
 e.g. 
 
-<div class="container">
-  <div class="row">
-    <div class="six columns">
-     A half-page column here
-    </div>
-    <div class="six columns">
-      And another half page column here			
-    </div>
-  </div>
+
+<!-- Foundation 3 Structure -->
+<div class="row">
+  <div class="six columns">
+  <div class="six columns">
 </div>
 
 There's a lot more to it than this, check out http://foundation.zurb.com/docs/ for info. 
@@ -29,12 +25,6 @@ There's a lot more to it than this, check out http://foundation.zurb.com/docs/ f
 
 /* --------------------------------------------------
 Default colour scheme reference
-body font-color - #555; 
-h1, h2, h3, h4, h5, h6 - #181818
-a  - #2a85e8
-a:hover - #11639d 
-a:focus - #cc4714
-button - #00a6fc
 
 -----------------------------------------------------
 
@@ -57,11 +47,11 @@ Legacy class fixes
 Featured collections showcase using Orbit
 ----------------------------------------- */
 
-#featured-collection { background: url(spinner.gif) center center #f4f4f4; height: 300px; }
-#featured-collection img { display: none; }
+#featured { background: url(../images/spinner.gif) center center #f4f4f4; height: 300px; }
+#featured img { display: none; }
 
-#featured-collection.orbit { background: none; }
-#featured-collection.orbit img { display: block; }
+#featured.orbit { background: none; }
+#featured.orbit img { display: block; }
 
 /* -----------------------------------------
 Browsing styles

@@ -6,8 +6,8 @@
 			<?php echo
 			custom_public_nav_header(); ?>
 		</ul>
-		<p>
-			<a href="http://omeka.org" id="omeka-logo" name="omeka-logo">Powered by Omeka</a> | <a href="http://omeka.org/codex/">Documentation</a> | <a href="http://omeka.org/forums/">Support Forums</a>
-		</p>
+		<ul class="link-list">
+			<li><a href="http://omeka.org" id="omeka-logo" name="omeka-logo">Powered by Omeka</a></li> <li> <a href="http://omeka.org/codex/">Documentation</a></li> <li> <a href="http://omeka.org/forums/">Support Forums</a></li>
+		</ul>
 	</div>
 </div>

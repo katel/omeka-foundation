@@ -6,9 +6,29 @@
 <p><?php echo get_theme_option('Homepage Text'); ?></p>
 <?php endif; ?>
 
+<!-- Featured Collection -->
+<div class="row">
+<div class="twelve columns">
+
+			<div class="panel">
+			<div id="featured">
+	<?php if (get_theme_option('Display Featured Collection')): ?>
+
+	<div id="featured-collection">
+	<div><?php echo display_random_featured_collection(); ?></div>
+	</div>
+	
+</div>
+	</div>
+
+<?php endif; ?>
+	<!-- end featured collection -->
+	
+<!-- Featured Item -->
+
 <?php if (get_theme_option('Display Featured Item') == 1): ?>
 
-<!-- Featured Item -->
+
 
 <div class="row">
   <div id="featured-items" class="six columns">
@@ -49,24 +69,7 @@ if (has_items_for_loop()):
 </div>
 <!-- end recent-items -->
 
-	<!-- Featured Collection -->
-<div class="row">
-<div class="twelve columns">
-
-			<div class="panel">
-	<?php if (get_theme_option('Display Featured Collection')): ?>
-
-	<div id="featured-collection">
-	<?php echo display_random_featured_collection(); ?>
-	</div>
-	
-
-	</div>
-
-<?php endif; ?>
-	<!-- end featured collection -->
-	
-	
+		
 	<!-- Featured Exhibit -->
 	
 	<div class="row">

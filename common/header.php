@@ -21,14 +21,16 @@ display_css();
 
 <!-- JavaScripts -->
 <?php
-queue_js(array('app', 'foundation','modernizr.foundation', 'jquery.foundation.orbit'));
+queue_js(array('app', 'foundation', 'jquery.min', 'modernizr.foundation', 'jquery.foundation.orbit'));
 display_js();
 ?>
 <script type="text/javascript">
    $(window).load(function() {
-       $('#featured-collection').orbit();
+       $('#featured').orbit({ fluid: '16x6' });
+
    });
 </script>
+
 
 </head>
 
@@ -43,12 +45,20 @@ display_js();
 			</h1>
 
         <div id="primary-nav">
-            <ul class="nav-bar">
-            <?php echo custom_public_nav_header(); ?>
-                           <?php plugin_page_header(); ?>
-                           <li>                <?php echo link_to_advanced_search(); ?>
+         	<ul class="nav-bar">
+<li>
+<?php echo nav (
+array(
+'Browse Items' => uri('items'),
+'Browse Collections' => uri('collections')
+)
+);
+?>
 </li>
-            <span id="search-container">
+<li>
+<?php echo link_to_advanced_search('More Search Options'); ?>
+</li>
+          <span id="search-container">
                 <?php echo simple_search(); ?>
             </span><!-- end search -->
             </ul>
