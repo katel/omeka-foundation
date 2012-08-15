@@ -92,7 +92,7 @@ Forms
 
 
 
-/* a bit of a hacky way to match the button with foundation buttons */
+/* a bit of a hacky way to match search buttons with foundation buttons */
 
 #submit_search, #submit_search_advanced {
 	margin: 3px 3px 18px;
@@ -119,8 +119,8 @@ Forms
 
 #simple-search .textinput {
 display: inline-block;
-width: 200px;
-padding: 6px 12px 10px;
+width: 18em;
+padding: 4px 12px 10px;
 
 
 
@@ -131,7 +131,7 @@ padding: 6px 12px 10px;
 #search-container {
 float: right;
 border: none;
-margin:0  1em;
+margin:0  0.5em;
 
 }
 
@@ -147,9 +147,17 @@ margin: 0;}
 margin-top: 1em;
 }
 
+#search-narrow-by-fields, #search-by-range, #search-selects {
+margin: 20px 0;}
 
-/* Tags ahoy ---------- */
+#advanced-search-form .inputs {
+margin: 10px 0;
+}
+/* All tags are created equal - moving away from the traditional, weighted tag cloud --------- */
 
+
+.hTagcloud {
+padding: 20px 0;}
 
 .tagcloud p {
 	padding: 10px;
@@ -158,56 +166,25 @@ margin-top: 1em;
 .hTagcloud ul {
 	width: 50%;
 	overflow: hidden;
-	background-color: #f2f2f2;
+
 	margin: 0 0 1em;
-	border-radius: 8px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
+	
 }
 
 .hTagcloud li {
 	display: inline-block;
 	float: left;
+	
 	text-align: center;
-	margin: 0 20px 20px 0;
-	padding: 10px;
+	margin: 0 10px 10px 0;
+	padding: 3px 8px;
+background-color: #555;
+border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
 }
 
-tagcloud p {
-	background-color: #f2f2f2;
-	box-shadow: 0 3px 5px #666;
-	-webkit-box-shadow: 0 3px 5px #666;
-	-moz-box-shadow: 0 3px 5px #666;
-	margin-bottom: 20px;
-}
 
-.popular {
-	font-size: 100%;
-}
-.v-popular {
-	font-size: 140%;
-}
-.vv-popular {
-	font-size: 180%;
-}
-.vvv-popular {
-	font-size: 220%;
-}
-.vvvv-popular {
-	font-size: 260%;
-}
-.vvvvv-popular {
-	font-size: 300%;
-}
-.vvvvvv-popular {
-	font-size: 320%;
-}
-.vvvvvvv-popular {
-	font-size: 340%;
-}
-.vvvvvvvv-popular {
-	font-size: 360%;
-}
 
 
 
