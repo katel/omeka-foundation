@@ -174,7 +174,7 @@ padding: 20px 0;}
 .hTagcloud li {
 	display: inline-block;
 	float: left;
-	
+
 	text-align: center;
 	margin: 0 10px 10px 0;
 	padding: 3px 8px;
@@ -184,7 +184,8 @@ border-radius: 10px;
 	-webkit-border-radius: 10px;
 }
 
-
+.hTagcloud a:hover {
+color: white;
 
 
 
