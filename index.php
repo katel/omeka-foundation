@@ -15,7 +15,8 @@
 	<?php if (get_theme_option('Display Featured Collection')): ?>
 
 	<div id="featured-collection">
-	<div><?php echo display_random_featured_collection(); ?></div>
+	<div><?php echo display_random_featured_collection(); ?>
+	</div>
 	</div>
 	
 </div>
