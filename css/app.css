@@ -150,9 +150,14 @@ margin-top: 1em;
 #search-narrow-by-fields, #search-by-range, #search-selects {
 margin: 20px 0;}
 
+
 #advanced-search-form .inputs {
 margin: 10px 0;
+font-size: 1em;
 }
+
+
+
 /* All tags are created equal - moving away from the traditional, weighted tag cloud --------- */
 
 
