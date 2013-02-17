@@ -48,21 +48,16 @@
 
 
         <div id="primary-nav">
-         	<ul class="nav-bar">
-<li>
-	<?php 
-$navArray = array();
-$navArray[] = array('label'=>'Browse Items', 'uri'=>url('items'));
-$navArray[] = array('label'=>'Browse Collections', 'uri'=>url('collections'));
+	<nav class="top-bar">
+         	<ul class="dropdown">
+		        <li class="toggle-topbar"><a href="#"></a></li>
 
-echo nav($navArray);
-	?>
-	
-	
+	<li class="has-dropdown">
+     <?php echo public_nav_main(); ?>	</li>
 
-</li>
-<li>
-<?php echo 	link_to_item_search('More Search Options'); ?>
+
+
+<li><?php echo 	link_to_item_search('More Search Options'); ?>
 </li>
           <span id="search-container">
             <?php echo search_form(array('show_advanced' => false)); ?>
