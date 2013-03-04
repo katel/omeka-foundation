@@ -47,11 +47,11 @@ Legacy class fixes
 Featured collections showcase using Orbit
 ----------------------------------------- */
 
-#featured { background: url(../images/spinner.gif) center center #f4f4f4; height: 300px; }
-#featured img { display: none; }
+div#featured { background: url(../images/spinner.gif) center center #f4f4f4; height: 300px; }
+div#featured img { display: none; }
 
-#featured.orbit { background: none; }
-#featured.orbit img { display: block; }
+div#featured.orbit { background: none; }
+div#featured.orbit img { display: block; }
 
 /* -----------------------------------------
 Browsing styles
@@ -90,58 +90,57 @@ display: inline;
 Forms
 ----------------------------------------- */
 
-
-
-/* a bit of a hacky way to match search buttons with foundation buttons */
-
-#submit_search, #submit_search_advanced {
-	margin: 3px 3px 18px;
-	background: #2ba6cb;
-	text-align: center;
-	font-size: 11px;
-	padding: 6px 12px 10px;
-	color: #fff;
-	text-decoration: none;
-	font-weight: bold;
-
-	position: relative;
-	cursor: pointer;
-	border: none;
-	background: #2ba6cb url(../images/misc/button-gloss.png) repeat-x 0 -34px;
-	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
-	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
-	text-shadow: 0 -1px 1px rgba(0,0,0,0.28);
-	border: 1px solid #0593dc;
-	-webkit-transition: background-color .15s ease-in-out;
-	-moz-transition: background-color .15s ease-in-out;
-	-o-transition: background-color .15s ease-in-out;
-}
-
-#simple-search .textinput {
-display: inline-block;
-width: 18em;
-padding: 6px 12px 10px;
-
-
-
-
-}
-
-
 #search-container {
 float: right;
 border: none;
-margin:0  0.5em;
+margin:  0.5em 0 0.5em 2em;
+width: 45%;
 
 }
 
-#simple-search fieldset {
+#search-form input{
+  border:none;
+  border-color:transparent; /*Fix IE*/
+overflow: hidden; 
+width:70%;
+display: inline-block;
+}
 
-border: none;
-padding: 0 ;
-margin: 0;}
+/* a bit of a hacky way to match search buttons with foundation buttons */
+
+
+#search-form input[type="submit"], #submit_search_advanced {
+	width: 25%;
+
+padding: 6px 12px 10px;
+margin: 0 auto;
+  outline:none;
+  border:none;
+  float: right;
+background: #2ba6cb url(../images/misc/button-gloss.png) repeat-x 0 -34px;
+-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+text-shadow: 0 -1px 1px rgba(0,0,0,0.28);
+border: 1px solid #0593dc;
+-webkit-transition: background-color .15s ease-in-out;
+-moz-transition: background-color .15s ease-in-out;
+-o-transition: background-color .15s ease-in-out;
+	color: #fff;
+		margin: 6px 3px 18px;
+}
+
+#search-form {
+margin: 0;
+}
+
+
+
 
 /*advanced search */
+
+#advanced-search-form {
+	max-width: 50%;
+}
 
 #search-selects > div.field {
 margin-top: 1em;

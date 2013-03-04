@@ -59,10 +59,18 @@
 
 <li><?php echo 	link_to_item_search('More Search Options'); ?>
 </li>
-          <span id="search-container">
-            <?php echo search_form(array('show_advanced' => false)); ?>
-           
-            </span><!-- end search -->
+    <div class="row collapse">
+  <div class="four columns" id="search-container">
+
+      <div class="nine mobile-three columns">
+      <?php echo search_form(array('show_advanced' => false)); ?>
+      </div>
+   		
+
+  </div>
+</div>
+
+         </li>
             </ul>
       
         </div><!-- end primary-nav -->
