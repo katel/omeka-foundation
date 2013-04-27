@@ -51,6 +51,28 @@ Legacy class fixes
 .items ul, .collections ul, .search ul  {
 	list-style-position:inside;
 }
+
+
+	/* Sub Navs http://www.zurb.com/article/292/how-to-create-simple-and-effective-sub-na ---------------------- */
+	ul#sort-links-list { display: block; width: auto; overflow: hidden; margin: -4px 0 18px; margin-right: 0; margin-left: -9px; padding-top: 4px; }
+	ul#sort-links-list li { float: left; display: inline; margin-left: 9px; margin-bottom: 10px; }
+	ul#sort-links-list a { text-decoration: none; -webkit-border-radius: 1000px; -moz-border-radius: 1000px; -ms-border-radius: 1000px; -o-border-radius: 1000px; border-radius: 1000px; }
+	#sort-links-list li.sorting a { font-weight: bold; background: #2ba6cb; color: #fff; padding: 3px 9px; cursor: default; }
+	
+.sort-label {
+	display: inline;
+	    float: left;
+	    font-size: 0.875em;
+	    font-weight: normal;
+	    margin-bottom: 0.625em;
+	    margin-left: 0.5625em;
+	margin-top: 0.7em;
+	
+}
+
+.browse .items-nav  {
+	display:none;
+}
 /* -----------------------------------------
 Featured collections showcase using Orbit
 ----------------------------------------- */
