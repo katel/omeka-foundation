@@ -49,32 +49,28 @@
 
         <div id="primary-nav">
 	<nav class="top-bar">
-         	<ul class="dropdown">
-		        <li class="toggle-topbar"><a href="#"></a></li>
 
-	<li class="has-dropdown">
-     <?php echo public_nav_main(); ?>	</li>
-
-
-
-<li><?php echo 	link_to_item_search('More Search Options'); ?>
-</li>
+		      <section class="eight columns">
+		        <!-- Left Nav Section -->
+		        <?php echo public_nav_main(); ?>
+						<?php echo 	link_to_item_search('More Search Options'); ?>
+		
+		      </section>
+ <div class="four columns">
+	
     <div class="row collapse">
-  <div class="four columns" id="search-container">
+	
+  	  <?php echo search_form(array('show_advanced' => false)); ?>
 
-      <div class="nine mobile-three columns">
-      <?php echo search_form(array('show_advanced' => false)); ?>
-      </div>
+    </div>
+  </div>
    		
 
-  </div>
+
 </div>
 
-         </li>
-            </ul>
-      
+      </div>
         </div><!-- end primary-nav -->
 
-
-
-
+<div class="row">
+<div class="twelve columns">

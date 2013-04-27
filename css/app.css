@@ -43,6 +43,14 @@ Legacy class fixes
 	
 }
 
+/*.top-bar {
+	background: #444;
+}*/
+
+/* default foundation list style is outside */
+.items ul, .collections ul, .search ul  {
+	list-style-position:inside;
+}
 /* -----------------------------------------
 Featured collections showcase using Orbit
 ----------------------------------------- */
@@ -81,10 +89,18 @@ li.nav-browse-all {
 	background: url(../images/search.png) left center no-repeat;
 }
 
-.item-pagination > li {
-padding: 0 10px;
-display: inline;
-}
+
+
+
+/* Pagination ---------------------- */
+ul.item-pagination { display: block; height: 24px; margin-left: -5px; }
+ul.item-pagination li { float: left; display: block; height: 24px; color: #999; font-size: 14px; margin-left: 5px; }
+ul.item-pagination li a { display: block; padding: 1px 7px 1px; color: #555; }
+ul.item-pagination li:hover a, ul.pagination li a:focus { background: #e6e6e6; }
+ul.item-pagination li.unavailable a { cursor: default; color: #999; }
+ul.item-pagination li.unavailable:hover a, ul.pagination li.unavailable a:focus { background: transparent; }
+ul.item-pagination li.current a { background: #2ba6cb; color: white; font-weight: bold; cursor: default; }
+ul.item-pagination li.current a:hover, ul.pagination li.current a:focus { background: #2ba6cb; }
 
 /* -----------------------------------------
 Forms
@@ -93,8 +109,7 @@ Forms
 #search-container {
 float: right;
 border: none;
-margin:  0.5em 0 0.5em 2em;
-width: 45%;
+
 
 }
 

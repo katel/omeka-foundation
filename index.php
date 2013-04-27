@@ -34,7 +34,7 @@
 	<?php if (get_theme_option('Display Featured Collection')): ?>
 
 	<div id="featured-collection">
-	<div><?php echo random_featured_collection(); ?>
+<?php echo random_featured_collection(); ?>
 	</div>
 	</div>
 	
@@ -48,7 +48,7 @@
 
 <?php if (get_theme_option('Display Featured Item') == 1): ?>
 
-
+</div>
 
 <div class="row">
   <div id="featured-items" class="six columns">
@@ -103,6 +103,8 @@
 </div>
 	<!-- End featured Exhibit -->
 
+</div>
+</div>
 </div>
 <footer>
 <?php echo foot(); ?></footer>
