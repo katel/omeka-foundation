@@ -1,70 +1,76 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo get_html_lang(); ?>">
+<!DOCTYPE html>
+<html lang="<?php echo get_html_lang(); ?>">
 <head>
-<title><?php echo settings('site_title'); echo isset($title) ? ' | ' . $title : ''; ?></title>
+	<meta charset="utf-8">
+  <?php if ( $description = option('description')): ?>
+  <meta name="description" content="<?php echo $description; ?>" />
+  <?php endif; ?>
+  
+  <title><?php echo option('site_title'); echo isset($title) ? ' | ' . strip_formatting($title) : ''; ?></title>
 
-<!-- Meta -->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="<?php echo settings('description'); ?>" />
+  <?php echo auto_discovery_link_tags(); ?>
+  
 
-<?php echo auto_discovery_link_tag(); ?>
+  <!-- Plugin Stuff -->
 
-<!-- Plugin Stuff -->
-<?php plugin_header(); ?>
+  <?php fire_plugin_hook('public_head', array('view'=>$this)); ?>
 
-<!-- Stylesheets -->
-<?php
-queue_css(array('app', 'foundation'));
-display_css();
-?>
+  <!-- Stylesheets -->
 
-<!-- JavaScripts -->
-<?php
-queue_js(array('app', 'foundation', 'jquery.min', 'modernizr.foundation', 'jquery.foundation.orbit'));
-display_js();
-?>
-<script type="text/javascript">
-   $(window).load(function() {
-       $('#featured').orbit({ fluid: '16x6' });
+  <?php
+  queue_css_url('http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic');
+  queue_css_file('foundation');
+ queue_css_file('app');
+  echo head_css();
+  ?>
 
-   });
-</script>
+  <!-- JavaScripts -->
+  <?php queue_js_file('app'); ?>
+  <?php queue_js_file('foundation'); ?>
+  <?php queue_js_file('jquery.foundation.orbit'); ?>
+  <?php queue_js_file('jquery.min'); ?>
+  <?php echo head_js(); ?>
+
+
 
 
 </head>
 
-<body<?php echo isset($bodyid) ? ' id="'.$bodyid.'"' : ''; ?><?php echo isset($bodyclass) ? ' class="'.$bodyclass.'"' : ''; ?>>
-<?php plugin_body(); ?>
-
-	<?php plugin_page_header(); ?>
+<?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
+    <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
+<header>
+		  <?php fire_plugin_hook('public_header'); ?>
+		</header>
 	<div class="row">
 		<div class="twelve columns">
-			<h1 id="site-title">
-				<?php echo link_to_home_page(custom_display_logo()); ?>
-			</h1>
+	
+	      <h1 id="site-title"><?php echo link_to_home_page(theme_logo()); ?></h1>
+
 
         <div id="primary-nav">
-         	<ul class="nav-bar">
-<li>
-<?php echo nav (
-array(
-'Browse Items' => uri('items'),
-'Browse Collections' => uri('collections')
-)
-);
-?>
-</li>
-<li>
-<?php echo link_to_advanced_search('More Search Options'); ?>
-</li>
-          <span id="search-container">
-                <?php echo simple_search(); ?>
-            </span><!-- end search -->
-            </ul>
-      
+	<nav class="top-bar">
+
+		      <section class="eight columns">
+		        <!-- Left Nav Section -->
+		        <?php echo public_nav_main(); ?>
+						<?php echo 	link_to_item_search('More Search Options'); ?>
+		
+		      </section>
+ <div class="four columns">
+	
+    <div class="row collapse">
+	
+  	  <?php echo search_form(array('show_advanced' => false)); ?>
+
+    </div>
+  </div>
+   		
+
+
+</div>
+
+      </div>
         </div><!-- end primary-nav -->
 
-
-
-
+<div class="row">
+<div class="twelve columns">

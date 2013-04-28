@@ -43,15 +43,45 @@ Legacy class fixes
 	
 }
 
+/*.top-bar {
+	background: #444;
+}*/
+
+/* default foundation list style is outside */
+.items ul, .collections ul, .search ul  {
+	list-style-position:inside;
+}
+
+
+	/* Sub Navs http://www.zurb.com/article/292/how-to-create-simple-and-effective-sub-na ---------------------- */
+	ul#sort-links-list { display: block; width: auto; overflow: hidden; margin: -4px 0 18px; margin-right: 0; margin-left: -9px; padding-top: 4px; }
+	ul#sort-links-list li { float: left; display: inline; margin-left: 9px; margin-bottom: 10px; }
+	ul#sort-links-list a { text-decoration: none; -webkit-border-radius: 1000px; -moz-border-radius: 1000px; -ms-border-radius: 1000px; -o-border-radius: 1000px; border-radius: 1000px; }
+	#sort-links-list li.sorting a { font-weight: bold; background: #2ba6cb; color: #fff; padding: 3px 9px; cursor: default; }
+	
+.sort-label {
+	display: inline;
+	    float: left;
+	    font-size: 0.875em;
+	    font-weight: normal;
+	    margin-bottom: 0.625em;
+	    margin-left: 0.5625em;
+	margin-top: 0.7em;
+	
+}
+
+.items-nav  {
+	display:none;
+}
 /* -----------------------------------------
 Featured collections showcase using Orbit
 ----------------------------------------- */
 
-#featured { background: url(../images/spinner.gif) center center #f4f4f4; height: 300px; }
-#featured img { display: none; }
+div#featured { background: url(../images/spinner.gif) center center #f4f4f4; height: 300px; }
+div#featured img { display: none; }
 
-#featured.orbit { background: none; }
-#featured.orbit img { display: block; }
+div#featured.orbit { background: none; }
+div#featured.orbit img { display: block; }
 
 /* -----------------------------------------
 Browsing styles
@@ -81,67 +111,73 @@ li.nav-browse-all {
 	background: url(../images/search.png) left center no-repeat;
 }
 
-.item-pagination > li {
-padding: 0 10px;
-display: inline;
-}
+
+
+
+/* Pagination ---------------------- */
+ul.item-pagination { display: block; height: 24px; margin-left: -5px; }
+ul.item-pagination li { float: left; display: block; height: 24px; color: #999; font-size: 14px; margin-left: 5px; }
+ul.item-pagination li a { display: block; padding: 1px 7px 1px; color: #555; }
+ul.item-pagination li:hover a, ul.pagination li a:focus { background: #e6e6e6; }
+ul.item-pagination li.unavailable a { cursor: default; color: #999; }
+ul.item-pagination li.unavailable:hover a, ul.pagination li.unavailable a:focus { background: transparent; }
+ul.item-pagination li.current a { background: #2ba6cb; color: white; font-weight: bold; cursor: default; }
+ul.item-pagination li.current a:hover, ul.pagination li.current a:focus { background: #2ba6cb; }
 
 /* -----------------------------------------
 Forms
 ----------------------------------------- */
 
-
-
-/* a bit of a hacky way to match search buttons with foundation buttons */
-
-#submit_search, #submit_search_advanced {
-	margin: 3px 3px 18px;
-	background: #2ba6cb;
-	text-align: center;
-	font-size: 11px;
-	padding: 6px 12px 10px;
-	color: #fff;
-	text-decoration: none;
-	font-weight: bold;
-
-	position: relative;
-	cursor: pointer;
-	border: none;
-	background: #2ba6cb url(../images/misc/button-gloss.png) repeat-x 0 -34px;
-	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
-	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
-	text-shadow: 0 -1px 1px rgba(0,0,0,0.28);
-	border: 1px solid #0593dc;
-	-webkit-transition: background-color .15s ease-in-out;
-	-moz-transition: background-color .15s ease-in-out;
-	-o-transition: background-color .15s ease-in-out;
-}
-
-#simple-search .textinput {
-display: inline-block;
-width: 18em;
-padding: 6px 12px 10px;
-
-
-
-
-}
-
-
 #search-container {
 float: right;
 border: none;
-margin:0  0.5em;
+
 
 }
 
-#simple-search fieldset {
+#search-form input{
+  border:none;
+  border-color:transparent; /*Fix IE*/
+overflow: hidden; 
+width:70%;
+display: inline-block;
+}
 
-border: none;
-padding: 0 ;
-margin: 0;}
+/* a bit of a hacky way to match search buttons with foundation buttons */
+
+
+#search-form input[type="submit"], #submit_search_advanced {
+	width: 25%;
+
+padding: 6px 12px 10px;
+margin: 0 auto;
+  outline:none;
+  border:none;
+  float: right;
+background: #2ba6cb url(../images/misc/button-gloss.png) repeat-x 0 -34px;
+-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+text-shadow: 0 -1px 1px rgba(0,0,0,0.28);
+border: 1px solid #0593dc;
+-webkit-transition: background-color .15s ease-in-out;
+-moz-transition: background-color .15s ease-in-out;
+-o-transition: background-color .15s ease-in-out;
+	color: #fff;
+		margin: 6px 3px 18px;
+}
+
+#search-form {
+margin: 0;
+}
+
+
+
 
 /*advanced search */
+
+#advanced-search-form {
+	max-width: 50%;
+}
 
 #search-selects > div.field {
 margin-top: 1em;
@@ -238,4 +274,6 @@ Footer
 
 #footer {
 	border-top: 1px solid #dddddd;
+	background: #F2F2F2;
+	width: 100%;
 }
