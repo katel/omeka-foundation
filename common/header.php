@@ -65,13 +65,3 @@
    		
 
   </div>
-
-
-
-      
-        </div><!-- end primary-nav -->
-
-
-
-<div class="row">
-	<div class="twelve columns">
