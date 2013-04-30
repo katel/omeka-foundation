@@ -30,7 +30,6 @@
   <?php queue_js_file('jquery.foundation.orbit'); ?>
   <?php queue_js_file('jquery.min'); ?>
   <?php queue_js_file('vendor/modernizr'); ?>
-
   <?php echo head_js(); ?>
 
 
@@ -38,6 +37,20 @@
 
 </head>
 
+
+  <!-- JavaScripts -->
+  <?php queue_js_file('app'); ?>
+  <?php queue_js_file('foundation'); ?>
+  <?php queue_js_file('jquery.foundation.orbit'); ?>
+  <?php queue_js_file('jquery.min'); ?>
+  <?php echo head_js(); ?>
+
+
+
+
+</head>
+
+>>>>>>> origin/master
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
 <header>
@@ -55,7 +68,26 @@
 		      <section class="eight columns">
 		        <!-- Left Nav Section -->
 		        <?php echo public_nav_main(); ?>
-		-						<?php echo 	link_to_item_search('More Search Options'); ?>
+						<?php echo 	link_to_item_search('More Search Options'); ?>
+		
+		      </section>
+ <div class="four columns">
+	
+    <div class="row collapse">
+	
+  	  <?php echo search_form(array('show_advanced' => false)); ?>
+
+    </div>
+  </div>
+   		
+
+        <div id="primary-nav">
+	<nav class="top-bar">
+
+		      <section class="eight columns">
+		        <!-- Left Nav Section -->
+		      <?php echo public_nav_main(); ?>
+					<?php echo 	link_to_item_search('More Search Options'); ?>
 		      </section>
  <div class="four columns">
     <div class="row collapse">
@@ -65,3 +97,12 @@
    		
 
   </div>
+
+</div>
+
+      </div>
+        </div><!-- end primary-nav -->
+
+<div class="row">
+<div class="twelve columns">
+
