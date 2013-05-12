@@ -40,31 +40,53 @@
 
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
+
 <header>
 		  <?php fire_plugin_hook('public_header'); ?>
 		</header>
+		
+		        <div id="primary-nav" class="contain-to-grid sticky">
+		<nav class="top-bar">
+		 <ul class="title-area">
+		    <!-- Title Area -->
+		    <li class="name">
+		       <h1 id="site-title"><a href="#"><?php echo link_to_home_page(theme_logo()); ?></a></h1>
+		    </li>
+		    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+		    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+		  </ul>
+	
+				<section class="top-bar-section">
+								        <!-- Left Nav Section -->
+									<ul class="left">
+					      
+				        <?php echo public_nav_main(); ?>
+		
+
+						
+										</ul>
+				     
+
+			<ul class="right">
+				<li class="divider hide-for-small"></li>
+				<li><?php echo 	link_to_item_search('More Search Options'); ?></li>
+				
+		  <li><?php echo search_form(array('show_advanced' => false)); ?></li>
+		
+</ul>
+ </section>
+		    </nav>
+
+
+
+		  </div>
+
 	<div class="row">
+		
 		<div class="large-12 columns">
 	
 	      <h1 id="site-title"><?php echo link_to_home_page(theme_logo()); ?></h1>
 
-
-        <div id="primary-nav">
-	<nav class="top-bar">
-
-		      <section class="large-8 columns">
-		        <!-- Left Nav Section -->
-		        <?php echo public_nav_main(); ?>
-		-						<?php echo 	link_to_item_search('More Search Options'); ?>
-		      </section>
- <div class="four columns">
-    <div class="row collapse">
-  	  <?php echo search_form(array('show_advanced' => false)); ?>
-    </nav>
-  </div>
-   		
-
-  </div>
 
 
 

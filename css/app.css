@@ -143,13 +143,31 @@ width:70%;
 display: inline-block;
 }
 
+/* -----------------------------------------
+Forms
+----------------------------------------- */
+
+#search-container {
+float: right;
+border: none;
+
+
+}
+
+#search-form input{
+  border:none;
+  border-color:transparent; /*Fix IE*/
+overflow: hidden; 
+width:70%;
+display: inline-block;
+}
+
 /* a bit of a hacky way to match search buttons with foundation buttons */
 
 
 #search-form input[type="submit"], #submit_search_advanced {
 	width: 25%;
 
-padding: 6px 12px 10px;
 margin: 0 auto;
   outline:none;
   border:none;
@@ -162,14 +180,12 @@ border: 1px solid #0593dc;
 -webkit-transition: background-color .15s ease-in-out;
 -moz-transition: background-color .15s ease-in-out;
 -o-transition: background-color .15s ease-in-out;
-	color: #fff;
-		margin: 6px 3px 18px;
+color: #fff;
 }
 
 #search-form {
 margin: 0;
 }
-
 
 
 
