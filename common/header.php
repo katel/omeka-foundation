@@ -44,7 +44,7 @@
 		  <?php fire_plugin_hook('public_header'); ?>
 		</header>
 	<div class="row">
-		<div class="twelve columns">
+		<div class="large-12 columns">
 	
 	      <h1 id="site-title"><?php echo link_to_home_page(theme_logo()); ?></h1>
 
@@ -52,7 +52,7 @@
         <div id="primary-nav">
 	<nav class="top-bar">
 
-		      <section class="eight columns">
+		      <section class="large-8 columns">
 		        <!-- Left Nav Section -->
 		        <?php echo public_nav_main(); ?>
 		-						<?php echo 	link_to_item_search('More Search Options'); ?>
