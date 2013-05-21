@@ -88,60 +88,41 @@ Browsing styles
 ----------------------------------------- */
 
 
-.hentry {
-	padding-top: 1em;
-}
-
-.element {
-	margin-bottom: 1em;
-}
-
-
-ul#secondary-nav li {
-	line-height: 3em;
-	padding-left: 35px;
-	list-style: none;
-}
-
-/*icons from WooFunction Icon set by Liam McKay */
-li.nav-browse-by-tag {
-	background: url(../images/preview.png) left center no-repeat;
-}
-li.nav-browse-all {
-	background: url(../images/search.png) left center no-repeat;
-}
 
 
 
 
 /* Pagination ---------------------- */
-ul.item-pagination { display: block; height: 24px; margin-left: -5px; }
-ul.item-pagination li { float: left; display: block; height: 24px; color: #999; font-size: 14px; margin-left: 5px; }
-ul.item-pagination li a { display: block; padding: 1px 7px 1px; color: #555; }
-ul.item-pagination li:hover a, ul.pagination li a:focus { background: #e6e6e6; }
-ul.item-pagination li.unavailable a { cursor: default; color: #999; }
-ul.item-pagination li.unavailable:hover a, ul.pagination li.unavailable a:focus { background: transparent; }
-ul.item-pagination li.current a { background: #2ba6cb; color: white; font-weight: bold; cursor: default; }
-ul.item-pagination li.current a:hover, ul.pagination li.current a:focus { background: #2ba6cb; }
 
-/* -----------------------------------------
-Forms
------------------------------------------ */
+.item-pagination {
+  display: block;
+  height: 1.5em;
+  margin-left: -0.3125em; }
+  .item-pagination li {
+    display: block;
+    float: left;
+    height: 1.5em;
+    color: #222222;
+    font-size: 0.875em;
+    margin-left: 0.3125em; }
+    .item-pagination li a {
+      display: block;
+      padding: 0.0625em 0.4375em 0.0625em;
+      color: #999999; }
+    .item-pagination li:hover a,
+    .item-pagination li a:focus {
+      background: #e6e6e6; }
+    .item-pagination li.unavailable a {
+      cursor: default;
+      color: #999999; }
+    .item-pagination li.unavailable:hover a, .pagination li.unavailable a:focus {
+      background: transparent; }
+    .item-pagination li.current a {
+      background: #2ba6cb;
+      color: white;
+      font-weight: bold;
+      cursor: default; }
 
-#search-container {
-float: right;
-border: none;
-
-
-}
-
-#search-form input{
-  border:none;
-  border-color:transparent; /*Fix IE*/
-overflow: hidden; 
-width:70%;
-display: inline-block;
-}
 
 /* -----------------------------------------
 Forms
@@ -166,8 +147,7 @@ display: inline-block;
 
 
 #search-form input[type="submit"], #submit_search_advanced {
-	width: 25%;
-
+width: 25%;
 margin: 0 auto;
   outline:none;
   border:none;
@@ -247,39 +227,7 @@ color: white;
 
 
 
-/* --------------------------------------------------
-Pagination
--------------------------------------------------- */
-ul.pagination_list {
-	display: block;
-	height: 24px;
-	margin-left: -5px;
-	padding-top: 10px;
-}
-ul.pagination_list li {
-	float: left;
-	display: block;
-	height: 24px;
-	color: #999;
-	font-size: 15px;
-	margin-left: 5px;
-}
-ul.pagination_list li a {
-	display: block;
-	padding: 6px 7px 4px;
-	color: #555;
-}
-ul.pagination_list li.pagination_current, ul.pagination li:hover a, ul.pagination li a:focus {
-	border-bottom: solid 2px #00a6fc;
-	color: #141414;
-}
-ul.pagination_list li.unavailable a {
-	cursor: default;
-	color: #999;
-}
-ul.pagination_list li.unavailable:hover a, ul.pagination li.unavailable a:focus {
-	border-bottom: none;
-}
+
 
 
 
