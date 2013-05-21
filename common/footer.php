@@ -7,7 +7,7 @@
 	
 		</ul>
 		<div class="row">
-		<ul class="link-list twelve columns">
+		<ul class="link-list large-12 columns">
 			<li><a href="http://omeka.org" id="omeka-logo" name="omeka-logo">Powered by Omeka</a></li> <li> <a href="http://omeka.org/codex/">Documentation</a></li> <li> <a href="http://omeka.org/forums/">Support Forums</a></li>
 		</ul>
 	</div>
