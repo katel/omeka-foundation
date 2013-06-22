@@ -46,16 +46,16 @@ echo head_css();
 queue_js_file('app');
 ?>
   <?php
-queue_js_file('foundation');
+queue_js_file('foundation.min');
 ?>
   <?php
-queue_js_file('jquery.foundation.orbit');
+queue_js_file('foundation/foundation.orbit');
 ?>
   <?php
-queue_js_file('jquery.min');
+queue_js_file('vendor/jquery');
 ?>
   <?php
-queue_js_file('vendor/modernizr');
+queue_js_file('vendor/custom.modernizr');
 ?>
 
   <?php

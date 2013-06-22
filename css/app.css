@@ -35,17 +35,6 @@ Legacy class fixes
 ----------------------------------------- */
 
 
-#primary {
-	width: 100%;
-	max-width: 980px;
-	min-width: 727px;
-	margin: 0 auto;
-	
-}
-
-/*.top-bar {
-	background: #444;
-}*/
 
 /* default foundation list style is outside */
 .items ul, .collections ul, .search ul  {
@@ -92,36 +81,7 @@ Browsing styles
 
 
 
-/* Pagination ---------------------- */
 
-.item-pagination {
-  display: block;
-  height: 1.5em;
-  margin-left: -0.3125em; }
-  .item-pagination li {
-    display: block;
-    float: left;
-    height: 1.5em;
-    color: #222222;
-    font-size: 0.875em;
-    margin-left: 0.3125em; }
-    .item-pagination li a {
-      display: block;
-      padding: 0.0625em 0.4375em 0.0625em;
-      color: #999999; }
-    .item-pagination li:hover a,
-    .item-pagination li a:focus {
-      background: #e6e6e6; }
-    .item-pagination li.unavailable a {
-      cursor: default;
-      color: #999999; }
-    .item-pagination li.unavailable:hover a, .pagination li.unavailable a:focus {
-      background: transparent; }
-    .item-pagination li.current a {
-      background: #2ba6cb;
-      color: white;
-      font-weight: bold;
-      cursor: default; }
 
 
 /* -----------------------------------------
@@ -136,8 +96,6 @@ border: none;
 }
 
 #search-form input{
-  border:none;
-  border-color:transparent; /*Fix IE*/
 overflow: hidden; 
 width:70%;
 display: inline-block;
@@ -149,43 +107,15 @@ display: inline-block;
 #search-form input[type="submit"], #submit_search_advanced {
 width: 25%;
 margin: 0 auto;
-  outline:none;
-  border:none;
-  float: right;
-background: #2ba6cb url(../images/misc/button-gloss.png) repeat-x 0 -34px;
--moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
--webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
-text-shadow: 0 -1px 1px rgba(0,0,0,0.28);
-border: 1px solid #0593dc;
--webkit-transition: background-color .15s ease-in-out;
--moz-transition: background-color .15s ease-in-out;
--o-transition: background-color .15s ease-in-out;
-color: #fff;
 }
 
 #search-form {
 margin: 0;
+background-color: #111111
 }
 
-
-
-/*advanced search */
-
-#advanced-search-form {
-	max-width: 50%;
-}
-
-#search-selects > div.field {
-margin-top: 1em;
-}
-
-#search-narrow-by-fields, #search-by-range, #search-selects {
-margin: 20px 0;}
-
-
-#advanced-search-form .inputs {
-margin: 10px 0;
-font-size: 1em;
+.top-bar-section ul {
+	background: inherit;
 }
 
 
