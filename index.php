@@ -27,6 +27,7 @@ if ((get_theme_option('Display Featured Exhibit')) && function_exists('exhibit_b
     <!-- Featured Exhibit -->
     <?php
     echo exhibit_builder_display_random_featured_exhibit();
+
 ?>
     <?php
 endif;
@@ -44,11 +45,13 @@ endif;
 if (get_theme_option('Display Featured Collection')):
 ?>
 
-	<div id="featured-collection">
+	<div id="featured-collection" >
 <?php
     echo random_featured_collection();
 ?>
+
 	</div>
+	
 	</div>
 	
 

@@ -46,7 +46,7 @@ echo head_css();
 queue_js_file('app');
 ?>
   <?php
-queue_js_file('foundation.min');
+queue_js_file('foundation/foundation');
 ?>
   <?php
 queue_js_file('foundation/foundation.orbit');
