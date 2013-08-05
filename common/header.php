@@ -59,6 +59,13 @@ queue_js_file('vendor/custom.modernizr');
 ?>
 
   <?php
+queue_js_file('foundation/foundation.forms');
+?>
+
+
+
+
+  <?php
 echo head_js();
 ?>
 
@@ -143,9 +150,5 @@ echo link_to_home_page(theme_logo());
 
 
       
-        </div><!-- end primary-nav -->
 
 
-
-<div class="row">
-	<div class="twelve columns">

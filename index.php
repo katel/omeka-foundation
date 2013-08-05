@@ -33,8 +33,7 @@ if ((get_theme_option('Display Featured Exhibit')) && function_exists('exhibit_b
 endif;
 ?>
 
-</div><!-- end primary -->
-
+</div>
 <!-- Featured Collection -->
 <div class="row">
 <div class="large-12 columns">
@@ -61,7 +60,7 @@ if (get_theme_option('Display Featured Collection')):
 endif;
 ?>
 	<!-- end featured collection -->
-	
+
 <!-- Featured Item -->
 
 <?php
@@ -142,7 +141,7 @@ echo link_to_items_browse(__('View All Items'));
 </div>
 <!-- end recent-items -->
 
-		
+	</div>
 	<!-- Featured Exhibit -->
 	
 	<div class="row">
@@ -160,12 +159,10 @@ if ((get_theme_option('Display Featured Exhibit')) && function_exists('exhibit_b
   <?php
 endif;
 ?>
-</div>
-	<!-- End featured Exhibit -->
 
-</div>
-</div>
-</div>
+
+</div><!-- end primary -->
+
 
 <footer>
 <?php

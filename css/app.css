@@ -27,14 +27,28 @@ There's a lot more to it than this, check out http://foundation.zurb.com/docs/ f
 Default colour scheme reference
 
 -----------------------------------------------------
-
-
+Main link colour: #2ba6cb;
+Text colour: #222222
+background: white
 
 /* -----------------------------------------
-Legacy class fixes
+global classes
 ----------------------------------------- */
+h1#site-title a{
+color: #2ba6cb;
+}
 
+.page {
+	padding-left: 0.9375em;
+}
 
+#primary-nav {
+	
+}
+
+#primary-nav a:hover {
+	color: #2ba6cb;
+}
 
 /* default foundation list style is outside */
 .items ul, .collections ul, .search ul  {
@@ -76,8 +90,14 @@ div#featured.orbit img { display: block; }
 Browsing styles
 ----------------------------------------- */
 
+body.items h1, body.collections h1 {
+	font-size: 2.3125em;
+}
 
 
+.hentry h2 {
+	font-size: 1.375em; }
+}
 
 
 
@@ -101,11 +121,17 @@ width:70%;
 display: inline-block;
 }
 
-/* a bit of a hacky way to match search buttons with foundation buttons */
+
+	select {
+	border: 1px solid;
+	white-space: pre;
+	color: black;
+	cursor: default;
+	}
 
 
 #search-form input[type="submit"], #submit_search_advanced {
-width: 25%;
+width: 27%;
 margin: 0 auto;
 }
 
@@ -155,11 +181,13 @@ border-radius: 10px;
 .hTagcloud a:hover {
 color: white;
 
+}
 
 
 
-
-
+.item-meta {
+	margin-bottom: 0.5em;
+}
 
 
 
@@ -169,6 +197,21 @@ Footer
 
 #footer {
 	border-top: 1px solid #dddddd;
-	background: #F2F2F2;
+	background: #1399bd;
 	width: 100%;
+	color: white;
+}
+
+
+ul.link-list {
+	display: inline-block;
+	
+}
+
+ul.link-list a, #footer h4 {
+	color: white;
+}
+
+ul.link-list a:hover {
+	color: #f8f8f8;
 }
