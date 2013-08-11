@@ -145,6 +145,26 @@ background-color: #111;
 	background: inherit;
 }
 
+#advanced-search-form select {
+	margin-top: 1em;
+	display: block;
+    position: relative;
+    top: 0;
+    height: 2.3125em;
+    margin-bottom: 1.25em;
+    margin-top: 0px;
+    padding: 0px;
+    width: 100%;
+    background: white;
+    background: -moz-linear-gradient(top, white 0%, #f3f3f3 100%);
+    background: -webkit-linear-gradient(top, white 0%, #f3f3f3 100%);
+    background: linear-gradient(to bottom, white 0%, #f3f3f3 100%);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 0.875em;
+    vertical-align: top;
+
+}
 
 
 /* All tags are created equal - moving away from the traditional, weighted tag cloud --------- */

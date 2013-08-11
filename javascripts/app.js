@@ -10,6 +10,5 @@ jQuery(document).ready(function($){
 	$("#advanced-search-form").addClass("custom large-6 small-6");
 	$(".add_search").addClass("tiny button dropdown");
 	$(".remove_search").addClass("tiny button secondary");
-
 	
 });
